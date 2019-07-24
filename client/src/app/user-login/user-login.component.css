@@ -1,0 +1,35 @@
+.h3[_ngcontent-c1], h3[_ngcontent-c1] {
+  font-size: 1.75rem;
+  color:black;
+  margin-top:-215px;
+}
+.login100-more{
+    height:700px;
+    border-radius: 50%;
+}
+h1[_ngcontent-c1], h2[_ngcontent-c1], h3[_ngcontent-c1], h4[_ngcontent-c1], h5[_ngcontent-c1], h6[_ngcontent-c1] {
+  margin: 0px;
+  margin-top: -300px;
+}
+.row {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+.column::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.login100-form-btn{
+  border-radius: 50%;
+  margin-right:30%;
+  margin-left:30%;
+  background-color: black;
+}
+.container-login100{
+  margin-left:-300px;
+}
+.wrap-input100 {
+  margin-left: 25%;
+}

@@ -219,7 +219,7 @@ export class NotificationsComponent implements OnInit {
     console.log("Id of particular student : ", data);
     this.educationservice.approveRequest(data)
       .subscribe(result => this.message = "Job Post Updated Successfully!");
-    this.router.navigateByUrl('/notifications');
+    this.router.navigate(['/admin/notifications']);
     window.location.reload()
   }
 
@@ -228,7 +228,7 @@ export class NotificationsComponent implements OnInit {
     console.log("Id of particular student : ", data);
     this.educationservice.rejectRequest(data)
       .subscribe(result => this.message = "Job Post Updated Successfully!");
-    this.router.navigateByUrl('/notifications');
+    this.router.navigate(['/admin/notifications']);
     window.location.reload()
   }
 
@@ -237,7 +237,7 @@ export class NotificationsComponent implements OnInit {
     console.log("Id of particular student : ", data);
     this.educationservice.approveProfileRequest(data)
       .subscribe(result => this.message = "Job Post Updated Successfully!");
-    this.router.navigateByUrl('/notifications');
+    this.router.navigate(['/admin/notifications']);
     window.location.reload()
   }
 

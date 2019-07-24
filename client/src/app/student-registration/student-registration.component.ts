@@ -20,7 +20,8 @@ export class RegisterStudentComponent{
   student = new Student(); 
   submitted = false;
   myForm: FormGroup;
-  branches: Branch[] 
+  branches: Branch[]
+  value:string;
  
   backlogs = ["Never had any backlog", "Cleared All", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "More than 10"];
   data = {
@@ -94,6 +95,9 @@ export class RegisterStudentComponent{
     this.setExperienceDetails();
     this.setAchievements();
     this.setProjects();
+  }
+  functio(data:string){
+    this.value = data;
   }
 
   deleteEducationDetails(index) {

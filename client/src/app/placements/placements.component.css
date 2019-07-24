@@ -1,3 +1,13 @@
+.mat-card-header {
+  background-color: rgb(0, 179, 54);
+
+}
+.mat-tab-group {
+  background-color : whitesmoke;
+}
+.btn-btn{
+  background-color: rgb(0, 179, 54);
+}
 .header img {
     float: left;
     width: 150px;
@@ -199,4 +209,7 @@
     margin-right: 100px;
   }
   
+  .content{
+font-size: 16px
+  }
   

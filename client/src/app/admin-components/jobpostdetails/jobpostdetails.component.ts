@@ -139,21 +139,27 @@ export class JobpostdetailsComponent implements OnInit {
     })
   }
 
-  delete(): void {
+ private  delete(): void {
     this.submitted = true;
     this.jobpostsService.deleteJobPost(this.data[0].id)
-      .subscribe(result => this.message = "Student Deleted Successfully!");
-    this.router.navigateByUrl('/placements');
-    window.location.reload();
+      .subscribe(result => {
+        console.log("Closed Job Post Successfully", result);         ;
+    // window.location.reload();
+    this.router.navigate(['/admin/placements']);
+      })
+   
   }
+  
 
 
   closeJobPost(): void {
     this.jobpostsService.closeJobPost(this.data[0].id).subscribe(result => {
       console.log("Closed Job Post Successfully", result);
+      this.router.navigate(['/admin/placements']);
     })
-    this.router.navigateByUrl('/placements');
-    window.location.reload();
+    // window.location.reload();
+    //this.router.navigate(['/admin/placements']);
+   
   }
 
   back(): void {

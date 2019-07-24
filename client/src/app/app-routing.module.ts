@@ -15,14 +15,20 @@ import { ViewCompetitionComponent } from './view-competition/view-competition.co
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { NotifyMessageComponent } from './notify-message/notify-message.component';
 import { StudentEditComponent } from './student-edit/student-edit.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 const routes: Routes = [
   { 
-    path: 'login', 
-    component: UserLoginComponent
-  },
+    path: '', 
+    component: MainPageComponent
+    },
    { 
-     path: '', 
+     path: 'login', 
+     
+     component : UserLoginComponent
+   },
+   {
+     path : '',
      redirectTo: 'login', 
      pathMatch: 'full'
    },

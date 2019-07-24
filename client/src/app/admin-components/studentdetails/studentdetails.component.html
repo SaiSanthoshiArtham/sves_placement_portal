@@ -79,9 +79,9 @@
 
             </div>
             <!-- [routerLink]="['/manageaccount', filters.institute_university_name , filters.major , filters.percentage , filters.passing_year , filters.backlogs]" -->
-            <button mat-button class="btn btn-danger pull-right" (click)=Apply()> Apply </button> &nbsp;
+            <button mat-button class="btn-btn" (click)=Apply()> Apply </button> &nbsp;
             <!-- <button mat-button class="btn btn-danger" (click)=refresh()> Apply another filter </button> &nbsp; -->
-            <button (click)="downloadExcel()" class="btn btn-danger pull-right"> Download Excel </button>
+            <button (click)="downloadExcel()" class="btn-btn"> Download Excel </button>
             <br><br>
           </form>
 
@@ -177,9 +177,9 @@
               </div>
             </div>
 
-            <button mat-button class="btn btn-danger pull-right" (click)=getfiltereddata()> Apply </button> &nbsp;
+            <button mat-button class="btn-btn" (click)=getfiltereddata()> Apply </button> &nbsp;
             <!-- <button mat-button class="btn btn-danger" (click)=refresh()> Apply another filter </button> &nbsp; -->
-            <button (click)="downloadPlacementData()" class="btn btn-danger pull-right"> Download Excel </button>
+            <button (click)="downloadPlacementData()" class="btn-btn"> Download Excel </button>
 
 
           </form>
@@ -263,7 +263,7 @@
                 </div>
               </div>
 
-              <button mat-button class="btn btn-danger pull-right" (click)=getfiltereddata()> Apply </button> &nbsp;
+              <button mat-button class="btn-btn" (click)=getfiltereddata()> Apply </button> &nbsp;
             <!-- <button mat-button class="btn btn-danger" (click)=refresh()> Apply another filter </button> &nbsp; -->
             <!-- <button (click)="downloadPlacementData()" class="btn btn-danger pull-right"> Download Excel </button> -->
 
@@ -296,7 +296,7 @@
                               </mat-select>
                             </mat-form-field>
                         </div>
-                        <button mat-button class="btn btn-danger pull-right" (click)=updateStatus()> Update </button> &nbsp;
+                        <button mat-button class="btn-btn" (click)=updateStatus()> Update </button> &nbsp;
                     </div>
                   </mat-card-content>
                 </mat-card>
@@ -369,7 +369,7 @@
             </div>
 
             <div class="row">
-              <button class="btn btn-danger pull-right" (click)="downloadPlacementExcel()"> Generate reports </button>
+              <button class="btn-btn" (click)="downloadPlacementExcel()"> Generate reports </button>
               &nbsp;
             </div>
 

@@ -32,6 +32,11 @@ import { NotifyMessageComponent } from './notify-message/notify-message.componen
 import { EditUserAccountComponent } from './edit-user-account/edit-user-account.component';
 import { AppliedInternshipsComponent } from './applied-internships/applied-internships.component';
 import { StudentEditComponent } from './student-edit/student-edit.component';
+import { MainPageComponent } from './main-page/main-page.component';
+import { BtechComponent } from './education/btech/btech.component';
+import { RegularComponent } from './certificate/regular/regular.component';
+import { SupplementaryComponent } from './certificate/supplementary/supplementary.component';
+
 
 
 @NgModule({
@@ -44,6 +49,12 @@ import { StudentEditComponent } from './student-edit/student-edit.component';
   //  StudentEditComponent,
    NotifyMessageComponent,
    EditUserAccountComponent,
+   MainPageComponent,
+   BtechComponent,
+   RegularComponent,
+   SupplementaryComponent,
+   
+   
 
 
   ],

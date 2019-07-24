@@ -50,9 +50,37 @@
 
                     <hr>
                     <div>
-                        <button mat-raised-button type="button" class="btn btn-danger pull-right">Edit Profile</button>
+                        <button mat-raised-button type="button" class="btn-btn">Edit Profile</button>
                     </div>
                 </mat-tab>
+              
+                <mat-tab label="Add Department" *ngIf="userdata.user_type_id=='TPO'" enable>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Department Code" type="text" id="id" required
+                                    [(ngModel)]="department.id" name="id" #id="ngModel">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Department Name" type="text" id="branch_name" required
+                                    [(ngModel)]="department.branch_name" name="branch_name" #branch_name="ngModel">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button mat-raised-button type="submit" class="btn-btn"
+                                (click)="addDept()">Add
+                                Department</button>
+                        </div>
+                    </div>
+                </mat-tab>
+              
                 <mat-tab label="Add Users" *ngIf="userdata.user_type_id == 'TPO'  " enable>
                     <br>
                     <div class="row">
@@ -124,36 +152,11 @@
                         </div>
                     </div>
 
-                    <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="addAdmin()">Add
+                    <button mat-raised-button type="submit" class="btn-btn" (click)="addAdmin()">Add
                         User</button>
                 </mat-tab>
 
-                <mat-tab label="Add Department" *ngIf="userdata.user_type_id=='TPO'" enable>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Department Code" type="text" id="id" required
-                                    [(ngModel)]="department.id" name="id" #id="ngModel">
-                            </mat-form-field>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Department Name" type="text" id="branch_name" required
-                                    [(ngModel)]="department.branch_name" name="branch_name" #branch_name="ngModel">
-                            </mat-form-field>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button mat-raised-button type="submit" class="btn btn-danger pull-right"
-                                (click)="addDept()">Add
-                                Department</button>
-                        </div>
-                    </div>
-                </mat-tab>
+                
                 <mat-tab label="Add College" *ngIf="userdata.user_type_id=='OPC'" enable>
                     <br>
                     <div class="row">
@@ -175,7 +178,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <button mat-raised-button type="submit" (click)="addCollege()"
-                                class="btn btn-danger pull-right">Add
+                                class="btn-btn">Add
                                 College</button>
                         </div>
                     </div>
@@ -197,7 +200,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <button mat-raised-button type="submit" (click)="upload()"
-                                    class="btn btn-danger pull-right">Upload</button>
+                                    class="btn-btn">Upload</button>
                             </div>
                         </div>
                     </div>

@@ -8,67 +8,13 @@
     <mat-card-content>
       <mat-tab-group dynamicHeight>
 
-        <mat-tab label="Open Job Postings"> <br>
-          <div class="col-md-12 row">
-            <div class="col-md-3" *ngFor="let d of data ; let i = index">
-              <mat-card class="example-card">
-                <mat-card-header>
-                  <div mat-card-avatar class="example-header-image"></div>
-                  <mat-card-title>{{d.company.company_name}}</mat-card-title>
-                  <mat-card-subtitle>{{d.job_profile}}</mat-card-subtitle>
-                </mat-card-header>
-                <div class="bg-img"><img src="http://localhost:4000/api/file/C{{d.company.company_id}}"
-                    style="width:200px; height : 100px" alt="Img"></div>
-                <mat-card-content>
-                  <p>Job Type : {{d.jobtype.job_type_name}}</p>
-                  <p>Location : {{d.job_location}}</p>
-                  <p>Salary : {{d.salary_lpa}}</p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button class="btn btn-danger" [routerLink]="['/admin/jobposts', d.id]">View</button>
-                </mat-card-actions>
-              </mat-card>
-            </div>
-            <br>
-            <br>
-          </div>
-          <br>
-        </mat-tab>
-
-        <mat-tab label="Closed Job Postings"> <br>
-          <div class="col-md-12 row">
-            <div class="col-md-3" *ngFor="let data_ of closeddata ; let i = index">
-              <mat-card class="example-card">
-                <mat-card-header>
-                  <div mat-card-avatar class="example-header-image"></div>
-                  <mat-card-title>{{data_.company.company_name}}</mat-card-title>
-                  <mat-card-subtitle>{{data_.job_profile}}</mat-card-subtitle>
-                </mat-card-header>
-                <div class="bg-img"><img src="http://localhost:4000/api/file/C{{data_.company.company_id}}"
-                    style="width:200px; height : 100px" alt="Img"></div>
-                <mat-card-content>
-                  <p>Job Type : {{data_.jobtype.job_type_name}}</p>
-                  <p>Location : {{data_.job_location}}</p>
-                  <p>Salary : {{data_.salary_lpa}}</p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button class="btn btn-danger" [routerLink]="['/admin/jobposts', data_.id]">Edit</button>
-                </mat-card-actions>
-              </mat-card>
-            </div>
-            <br>
-            <br>
-          </div>
-          <br>
-        </mat-tab>
-
         <mat-tab label="Add Company" *ngIf="userdata.user_type_id == 'TPO' " enable>
 
           <div class="row">
             <div class="col-md-8">
 
               <div class="card">
-                <div class="card-header card-header-danger">
+                <div class="card-header">
                   <h4 class="card-title">Job Post</h4>
                   <p class="card-category">Add Company Details</p>
                 </div>
@@ -109,7 +55,7 @@
                     </div>
                   </div>
 
-                  <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="addCompany()">Add
+                  <button mat-raised-button type="submit" class="btn pull-right" (click)="addCompany()">Add
                     Company</button>
 
                 </div>
@@ -120,14 +66,13 @@
         </mat-tab>
 
 
-
         <mat-tab label="Add job" *ngIf="userdata.user_type_id == 'TPO' " enable>
 
           <div class="row">
             <div class="col-md-8">
 
               <div class="card">
-                <div class="card-header card-header-danger">
+                <div class="card-header">
                   <h4 class="card-title">Job Post</h4>
                   <p class="card-category">Add Company Details</p>
                 </div>
@@ -313,7 +258,7 @@
                       </div>
                     </div>
 
-                    <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="addJob()">Add
+                    <button mat-raised-button type="submit" class="btn pull-right" (click)="addJob()">Add
                       Post</button>
                     <div class="clearfix"></div>
                   </form>
@@ -324,6 +269,64 @@
           </div>
         </mat-tab>
 
+        <mat-tab label="Open Job Postings"> <br>
+          <div class="col-md-12 row">
+            <div class="col-md-3" *ngFor="let d of data ; let i = index">
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>{{d.company.company_name}}</mat-card-title>
+                  <mat-card-subtitle>{{d.job_profile}}</mat-card-subtitle>
+                </mat-card-header>
+                <div class="bg-img"><img src="http://localhost:4000/api/file/C{{d.company.company_id}}"
+                    style="width:200px; height : 100px" alt="Img"></div>
+                <mat-card-content  style = "font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                  <p>Job Type : {{d.jobtype.job_type_name}}</p>
+                  <p>Location : {{d.job_location}}</p>
+                  <p>Salary : {{d.salary_lpa}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button class="btn" [routerLink]="['/admin/jobposts', d.id]">View</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <br>
+            <br>
+          </div>
+          <br>
+        </mat-tab>
+
+        <mat-tab label="Closed Job Postings"> <br>
+          <div class="col-md-12 row">
+            <div class="col-md-3" *ngFor="let data_ of closeddata ; let i = index">
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>{{data_.company.company_name}}</mat-card-title>
+                  <mat-card-subtitle>{{data_.job_profile}}</mat-card-subtitle>
+                </mat-card-header>
+                <div class="bg-img"><img src="http://localhost:4000/api/file/C{{data_.company.company_id}}"
+                    style="width:200px; height : 100px" alt="Img"></div>
+                <mat-card-content  style = "font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                  <p>Job Type : {{data_.jobtype.job_type_name}}</p>
+                  <p>Location : {{data_.job_location}}</p>
+                  <p>Salary : {{data_.salary_lpa}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button class="btn" [routerLink]="['/admin/jobposts', data_.id]">Edit</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <br>
+            <br>
+          </div>
+          <br>
+        </mat-tab>
+
+       
+
+
+      
         <mat-tab label="Job Application Status"> <br>
           <div class="col-md-12 row">
             <form>

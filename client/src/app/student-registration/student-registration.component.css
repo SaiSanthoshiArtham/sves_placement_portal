@@ -10,4 +10,16 @@
 .inputfile + label:hover {
     background-color: red;
 }
-
+.card{
+    font-size: 19px;
+}
+.card-header{ 
+    background-color: rgb(0, 179, 54);
+    font-size: 19px;
+}
+.card-title{
+    font-size: 30px;
+}
+.btn-btn{
+    background-color: rgb(0, 179, 54);
+}

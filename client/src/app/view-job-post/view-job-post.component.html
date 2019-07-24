@@ -1,8 +1,6 @@
 
 <div class="card">
-    <div class="card-header card-header-danger">
-        <h4 class="card-title">Job Post</h4>
-    </div>
+    
     <div class="card-body">
 <div *ngFor="let job_post of data">
  
@@ -40,17 +38,17 @@ Eligibility Criteria
                         <td>R.no </td>
                         <td>Stage</td>
                     </tr>
-                    <tr *ngFor="let stage of job_post.jobprocesses; index as i">
+                    <tr *ngFor="let stage of data[0].jobprocesses index as i">
                         <td>{{i+1}}</td>
                         <td>{{jobstages[stage.job_stage_id]}}</td>
                     </tr>
                 </table>
-            </div>                    
+            </div>          
 </mat-card-content>
 
 
 <div *ngIf = "placement_status == true && is_applied == false">
-        <button mat-raised-button type="button" class="btn btn-danger" (click)="applyJobPost()">Register</button>
+        <button mat-raised-button type="button" class="btn-btn"*ngIf=" data[0].is_active == 1; " (click)="applyJobPost()">Register</button>
 </div>
 <div *ngIf = 'placement_status == false'>
         <div style= "color: red">You are not eligible for this job profile.</div>

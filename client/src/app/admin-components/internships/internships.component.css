@@ -1,0 +1,34 @@
+.mat-card-header {
+    background-color: rgb(0, 179, 54);
+}
+.mat-tab-group {
+    background-color : whitesmoke;
+}
+
+.btn{
+    background-color: rgb(0, 179, 54);
+}
+.card-header{
+    background-color: rgb(0, 179, 54);
+}
+.mat-card-content{
+    font-size:16px;
+}
+.mat-card-title{
+    font-size: 30px;
+    margin-top: 10px;
+
+}
+.mat-card-subtitle{
+    font-size: 16px
+}
+.card-title{
+    font-size: 24px;
+}
+.col-md-12{
+    font-size: 25px;
+}
+.col-md-6{
+    font-size: 20px;
+
+}

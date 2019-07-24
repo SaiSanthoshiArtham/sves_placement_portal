@@ -4,7 +4,7 @@
       <div class="row">
           <div class="col-md-12">
               <div class="card">
-                  <div class="card-header card-header-danger">
+                  <div class="card-header">
                       <h4 class="card-title"> Student Registration</h4>
                       <p class="card-category">Complete your profile</p>
                   </div>
@@ -102,7 +102,7 @@
 
                             <hr>
                                                                                      
-                              <button style="margin-top:5px; margin-bottom:5px;" type="button" class="btn btn-primary btn-sm"
+                              <button style="margin-top:5px; margin-bottom:5px;" type="button" class="btn-btn"
                                 (click)="addNewEducationForm()">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Degree
                               </button>
@@ -112,7 +112,7 @@
                                   *ngFor="let edu_details of myForm.get('education_details').controls; let i=index">
                                   <fieldset>
                                     <legend>
-                                      <h4>Education Details {{i+1}}:<button style="margin-left:35px;" type="button" class="btn btn-danger"
+                                      <h4>Education Details {{i+1}}:<button style="margin-left:35px;" type="button" class="btn-btn"
                                           (click)="deleteEducationDetails(i)">
                                           <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Remove Degree
                                         </button>
@@ -124,8 +124,8 @@
                                                 <mat-form-field>
                                                     <mat-select id="certificate_degree_name" placeholder="Certificate Degree Name Ex. B.Tech,12th,10th"
                                                     name="certificate_degree_name" formControlName="certificate_degree_name" required>
-                                                      <mat-option value="B.Tech">BE/B.Tech</mat-option>
-                                                      <mat-option value="M.Tech">ME/M.Tech</mat-option>
+                                                      <mat-option value="B.Tech"(click)= "functio('btech')">BE/B.Tech</mat-option>
+                                                      <mat-option value="M.Tech"(click)= "functio('mtech')">ME/M.Tech</mat-option>
                                                       <mat-option value="MCA/PGDCA">MCA/PGDCA</mat-option>
                                                       <mat-option value="MBA/PGDAA">MBA/PGDAA</mat-option>
                                                       <mat-option value="BCA">BCA</mat-option>
@@ -170,6 +170,10 @@
                                                 class="alert alert-danger">
                                               Degree is required
                                            </div> -->
+                                            </div>
+                                            <div *ngIf = "value == 'btech'">
+                                              <app-btech></app-btech>
+
                                             </div>
                                             <div class="col-md-4">
                                                 <mat-form-field class="example-full-width">
@@ -228,20 +232,21 @@
                           
                                         </div>
                                         </div>
-                                        <div class="row">
+                                       
                                            
-                                              <!-- <div class="col-md-4">
+                                              <!--<div class="col-md-4">
                                                 <mat-form-field class="example-full-width">
                                                     <input matInput type="number" id="number" placeholder="CGPA" name="cgpa"  min="1" max="10"
                                                     formControlName="cgpa" required>
                                                 </mat-form-field>
                                               </div> -->
+                                              <!-- <div class="row">
                                             <div class="col-md-4">
                                                 <div ng-app="MyApp" ng-controller="AppCtrl" layout-margin layout-padding>
                                                   <input class="ng-hide" type="file" (change)="selectEduProofs($event,i)">
                                               </div>
                                               </div>
-                                      </div>
+                                      </div>-->
                                         <div class="clearfix"></div>
 
                                     </div>
@@ -253,7 +258,7 @@
                               <hr>
                               <hr>
 
-                              <button style="margin-top:5px; margin-bottom:5px;" type="button" class="btn btn-primary btn-sm"
+                              <button style="margin-top:5px; margin-bottom:5px;" type="button" class="btn-btn"
                                 (click)="addNewExperienceForm()">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Experience
                               </button>
@@ -262,7 +267,7 @@
                                   *ngFor="let edu_details of myForm.get('experience_details').controls; let i=index">
                                   <fieldset>
                                     <legend>
-                                      <h4>Experience Details {{i+1}}:<button style="margin-left:35px;" type="button" class="btn btn-danger"
+                                      <h4>Experience Details {{i+1}}:<button style="margin-left:35px;" type="button" class="btn-btn"
                                           (click)="deleteExperienceDetails(i)">
                                           <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Remove Experience 
                                         </button>
@@ -365,7 +370,7 @@
                               <hr>
                               <hr>
 
-                              <button style="margin-top:5px; margin-bottom:5px;" type="button" class="btn btn-primary btn-sm"
+                              <button style="margin-top:5px; margin-bottom:5px;" type="button" class="btn-btn"
                                 (click)="addNewAchievementForm()">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Achievement
                               </button>
@@ -374,7 +379,7 @@
                                   *ngFor="let edu_details of myForm.get('achievements').controls; let i=index">
                                   <fieldset>
                                     <legend>
-                                      <h4>Achievements {{i+1}}:<button style="margin-left:35px;" type="button" class="btn btn-danger"
+                                      <h4>Achievements {{i+1}}:<button style="margin-left:35px;" type="button" class="btn-btn"
                                           (click)="deleteAchievements(i)">
                                           <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Remove Achievement
                                         </button>
@@ -417,7 +422,7 @@
                                 </div>
                               </div>
 
-                                <button style="margin-top:5px; margin-bottom:5px;" type="button" class="btn btn-primary btn-sm"
+                                <button style="margin-top:5px; margin-bottom:5px;" type="button" class="btn-btn"
                                 (click)="addNewProjectForm()">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Project
                               </button>
@@ -426,7 +431,7 @@
                                   *ngFor="let edu_details of myForm.get('projects').controls; let i=index">
                                   <fieldset>
                                     <legend>
-                                      <h4>Projects {{i+1}}:<button style="margin-left:35px;" type="button" class="btn btn-danger"
+                                      <h4>Projects {{i+1}}:<button style="margin-left:35px;" type="button" class="btn-btn"
                                           (click)="deleteProjects(i)">
                                           <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Remove Project
                                         </button>
@@ -472,8 +477,8 @@
                                 </div>
                               </div>
                               <div class="btn-group btn-group-sm">
-                                <button mat-raised-button type="button" class="btn btn-danger"[routerLink]="['/login']">Cancel</button>
-                                <button mat-raised-button type="button" class="btn btn-danger"  (click)="addStudent()" [disabled]="!registrationForm.form.valid">Add</button>
+                                <button mat-raised-button type="button" class="btn-btn"[routerLink]="['/login']">Cancel</button>
+                                <button mat-raised-button type="button" class="btn-btn"  (click)="addStudent()" [disabled]="!registrationForm.form.valid">Add</button>
                               </div>
 
                             </form>

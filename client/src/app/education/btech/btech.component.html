@@ -1,0 +1,93 @@
+<!--<table id="t01">
+  <tr>
+    <th>sem/year</th>
+    <th>regular/supply</th> 
+    <th>aggregate</th>
+  <th>choose file</th>
+  </tr>
+  <tr>
+    <TD> 1-1:</TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT class="ng-hide" type="file"/></TD>
+  </tr>
+  <tr>
+    <TD> 1-2:</TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT class="ng-hide" type="file"/></TD>
+  </tr>
+  <tr>
+    <TD>2-1:</TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT class="ng-hide" type="file"/></TD>
+  </tr>
+  <tr>
+    <TD> 2-2:</TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT class="ng-hide" type="file"/></TD>
+  </tr>
+  <tr>
+    <TD> 3-1:</TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT class="ng-hide" type="file"/></TD>
+  </tr>
+  <tr>
+    <TD> 3-2</TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT class="ng-hide" type="file"/></TD>
+  </tr>
+  <tr>
+    <TD> 4-1:</TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT class="ng-hide" type="file"/></TD>
+  </tr>
+  <tr>
+    <TD> 4-2:</TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT type="text" name="txtoffice" maxlength="2" size="10"/></TD>
+  <TD> <INPUT class="ng-hide" type="file"/></TD>
+  </tr>
+</table>
+-->
+<div class="column">
+  <div class="col-md-12">
+      <mat-form-field>
+          <mat-select id="semester" placeholder="year/sem Ex. 1-1,1-2"
+          name="semester" formControlName="semester" required>
+            <mat-option value="1-1">1-1</mat-option>
+            <mat-option value="1-2">1-2</mat-option>
+            <mat-option value="2-1">2-1</mat-option>
+            <mat-option value="2-2">2-2</mat-option>
+            <mat-option value="3-1">3-1</mat-option>
+            <mat-option value="3-1">3-2</mat-option>
+            <mat-option value="4-1">4-1</mat-option>
+            <mat-option value="4-2">4-2</mat-option>
+          </mat-select>
+        </mat-form-field>
+  </div>
+  <div class="col-md-12">
+      <mat-form-field>
+          <mat-select id="regular/supplementary" placeholder="regular/supplementary"
+          name="regular/supplementary" formControlName="regular/supplementary" required>
+            <mat-option value="regular" (click)= "functi('regular')">regular</mat-option>
+            <mat-option value="supplementary" (click)= "functi('supplementary')">supplementary</mat-option>
+          </mat-select>
+        </mat-form-field>
+  </div>
+</div>
+
+<div *ngIf = "value == 'regular'">
+  <app-regular></app-regular>  
+</div>
+<div *ngIf = "value == 'supplementary'">
+  <app-supplementary></app-supplementary>  
+</div>
+
+ 
+

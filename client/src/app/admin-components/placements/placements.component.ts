@@ -93,6 +93,7 @@ export class AdminPlacementsComponent implements OnInit {
   addCompany() {
     this.submitted = true;
     this.saveCompany();
+    this.router.navigate(['/admin/placements']);
   }
 
   newJob(): void {
@@ -105,6 +106,7 @@ export class AdminPlacementsComponent implements OnInit {
     this.submitted = true;
     this.saveJob();
     this.saveJobProcess();
+    this.router.navigateByUrl('/admin/placements');
   }
   jobstages = {}
   ngOnInit(): void {

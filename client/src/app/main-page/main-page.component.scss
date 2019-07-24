@@ -1,0 +1,30 @@
+h1 {      font-size: 338%;  
+color:green;
+font-style:italic;   } 
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.test{
+    height:45px;
+    width:200px;
+font-size: 20px;
+color:black;
+border-radius: 50%;
+}
+#bd{
+border-style: solid;
+  border-width: 1px;
+  }
+  .footer {
+  margin-bottom:0px;
+  position: fixed;
+  left:1000px;
+  }

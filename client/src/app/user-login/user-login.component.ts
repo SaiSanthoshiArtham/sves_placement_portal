@@ -61,7 +61,7 @@ private authenticate(): void {
             })
           }});
         }else{
-          this.router.navigate(['/admin/dashboard'])
+          this.router.navigate(['/admin/placements'])
           // console.log("LoggedIn Admin")
           this.Auth.setLoggedIn(true)
         }
