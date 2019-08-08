@@ -2,11 +2,28 @@
 <br><br>
 <div class="col-md-12">
   <mat-card class="example-card">
+      <div class="scroll" style="color:Black ">  
+          <div *ngIf = "userdata.user_type_id == 'TPO' ">
+              <h1 style = "font-size : 15px" >WELCOME TO TPO</h1>
+      </div>
+      <div *ngIf = "userdata.user_type_id == 'DC' ">
+          <h1 style = "font-size : 15px" > WELCOME TO DC</h2>
+  </div>
+  <div *ngIf = "userdata.user_type_id == 'HOD' ">
+      <h1 style = "font-size : 15px" > WELCOME TO HOD</h2>
+</div>
+  </div>
+  <div class="scroll" style="color:Black ">  
+    <div *ngIf = "userdata.user_type_id == 'PRI' ">
+        <h1 style = "font-size : 15px" >WELCOME TO PRINCIPAL</h1>
+    </div>
+  </div>
     <mat-card-header>
       <h3><b>Placement Corner</b></h3>
     </mat-card-header>
     <mat-card-content>
       <mat-tab-group dynamicHeight>
+          
 
         <mat-tab label="Add Company" *ngIf="userdata.user_type_id == 'TPO' " enable>
 
@@ -15,8 +32,9 @@
 
               <div class="card">
                 <div class="card-header">
-                  <h4 class="card-title">Job Post</h4>
-                  <p class="card-category">Add Company Details</p>
+              
+                  <h2 class="card-title">Job Post</h2>
+                  <p class="card-category" style="color:#0c0c0c">Add Company Details</p>
                 </div>
                 <br>
                 <div class="row">
@@ -313,7 +331,7 @@
                   <p>Salary : {{data_.salary_lpa}}</p>
                 </mat-card-content>
                 <mat-card-actions>
-                  <button mat-button class="btn" [routerLink]="['/admin/jobposts', data_.id]">Edit</button>
+                  <button mat-button class="btn" [routerLink]="['/admin/jobposts', data_.id]">View</button>
                 </mat-card-actions>
               </mat-card>
             </div>
@@ -380,7 +398,25 @@
                 <!-- <button class="btn btn-danger pull-right" (click) = "refresh()" > Apply another filter </button> &nbsp; -->
               </div>
 
-              <br><br><br>
+              <br><br>
+              <br>
+              <div *ngIf="data">
+                <mat-card class="example-card">
+                  <mat-card-content>
+                    <div>
+                      <h4><b>Reports:</b></h4>
+                      <ng-container>
+                        <table>
+                          <tr>
+                            <th>Roll Number</th> &nbsp;
+                            <th>Round Type</th> &nbsp;                        
+                        </table>
+                      </ng-container>
+                    </div>
+                  </mat-card-content>
+                </mat-card>
+    
+              </div>
 
 
             </form>

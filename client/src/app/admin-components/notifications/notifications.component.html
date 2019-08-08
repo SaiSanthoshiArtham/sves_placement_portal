@@ -151,7 +151,7 @@
                     </mat-expansion-panel-header>
 
                     <mat-tab-group dynamicHeight>
-                        <mat-tab label="Pending requests" *ngIf="userdata.user_type_id != 'TPO' || userdata.user_type_id == 'DC' " enable>
+                        <mat-tab label="Pending requests" *ngIf = " userdata.user_type_id == 'DC' " enable>
                             <div *ngFor="let ed of studentdata ; let i = index ">
                                 <b> <label> Roll Number : </label> </b> {{ed.roll_no}} <br><br>
                                 <b> <label> First Name : </label> </b> {{ed.first_name}} <br><br>
@@ -179,10 +179,10 @@
 
 
                         </mat-tab>
-                        <mat-tab label="Approved requests" *ngIf="userdata.user_type_id == 'TPO' || userdata.user_type_id == 'TPO' " enable>
+                        <mat-tab label="Approved requests" *ngIf="userdata.user_type_id == 'TPO' || userdata.user_type_id == 'DC' " enable>
 
                         </mat-tab>
-                        <mat-tab label="Rejected requests" *ngIf="userdata.user_type_id != 'TPO' || userdata.user_type_id == 'TPO' " enable>
+                        <mat-tab label="Rejected requests" *ngIf=" userdata.user_type_id == 'DC' " enable>
 
                         </mat-tab>
                     </mat-tab-group>
@@ -200,7 +200,7 @@
                         </mat-panel-description>
                     </mat-expansion-panel-header>
                     <mat-tab-group dynamicHeight>
-                        <mat-tab label="Pending requests" *ngIf="userdata.user_type_id == 'TPO' || userdata.user_type_id == 'DC' " enable>
+                        <mat-tab label="Pending requests" *ngIf=" userdata.user_type_id == 'DC' " enable>
                             <div *ngFor="let ed of edudata ; let i = index ">
                                 <b> <label> Roll Number : </label> </b> {{ed.roll_no}} <br><br>
                                 <b> <label> Degree : </label> </b> {{ed.certificate_degree_name}} <br><br>
@@ -221,10 +221,10 @@
                                 <hr>
                             </div>
                         </mat-tab>
-                        <mat-tab label="Approved requests"*ngIf="userdata.user_type_id == 'TPO' || userdata.user_type_id == 'TPO' " enable >
+                        <mat-tab label="Approved requests"*ngIf="userdata.user_type_id == 'TPO' || userdata.user_type_id == 'DC' " enable >
 
                         </mat-tab>
-                        <mat-tab label="Rejected requests" *ngIf="userdata.user_type_id != 'TPO' || userdata.user_type_id == 'TPO' " enable>
+                        <mat-tab label="Rejected requests" *ngIf="userdata.user_type_id == 'DC' " enable>
 
                         </mat-tab>
                     </mat-tab-group>
@@ -254,7 +254,7 @@
                         </mat-panel-description>
                     </mat-expansion-panel-header>
                     <mat-tab-group dynamicHeight>
-                        <mat-tab label="Pending requests" *ngIf="userdata.user_type_id != 'TPO' || userdata.user_type_id == 'DC' " enable>
+                        <mat-tab label="Pending requests" *ngIf=" userdata.user_type_id == 'DC' " enable>
                             <div *ngFor="let ed of expdata ; let i = index ">
                                 <b> <label> Roll Number : </label> </b> {{ed.roll_no}} <br><br>
                                 <b> <label> Currently Working : </label> </b> {{ed.is_current_job}} <br><br>
@@ -281,10 +281,10 @@
                                 <hr>
                             </div>
                         </mat-tab>
-                        <mat-tab label="Approved requests" *ngIf="userdata.user_type_id == 'TPO' || userdata.user_type_id == 'TPO' " enable>
+                        <mat-tab label="Approved requests" *ngIf="userdata.user_type_id == 'TPO' || userdata.user_type_id == 'DC' " enable>
 
                         </mat-tab>
-                        <mat-tab label="Rejected requests" *ngIf="userdata.user_type_id != 'TPO' || userdata.user_type_id == 'TPO' " enable>
+                        <mat-tab label="Rejected requests" *ngIf="userdata.user_type_id == 'DC' " enable>
 
                         </mat-tab>
                     </mat-tab-group>
